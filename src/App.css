@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+.main {
+    margin: 0 auto;
+    padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.upload-button-wrapper {
+    margin: 0 30px 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.upload-button {
+    padding: 10px 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 118, 210);
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.upload-button:hover,
+.upload-button:focus-visible,
+.upload-button:active {
+    background-color: rgb(21, 101, 192);
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-button input {
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.original-image-wrapper {
+    position: relative;
+    user-select: none;
+}
+
+.original-image {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: -1;
+}
+
+.cut-image-wrapper {
+    margin: 0 30px;
+    user-select: none;
 }

@@ -6,7 +6,6 @@ const ImageViewArea = ({ image, clipArea }) => (
             width={image.width}
             height={image.height}
             alt='Итоговая картинка'
-            // Использую инлайновые стили, чтобы лишний раз не использовать ref
             style={clipArea ? { clipPath: `inset(${clipArea})` } : undefined}
         />
     </div>

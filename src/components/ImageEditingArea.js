@@ -16,7 +16,6 @@ const ImageEditingArea = ({ image, setClipArea }) => {
     const ref = useRef(null);
 
     useEffect(() => {
-        // При смене картинки сбрасываем рамку
         setFrame1Coords({ x: radius, y: radius });
         setFrame2Coords({ x: image.width + radius, y: image.height + radius });
     }, [image.width, image.height]);
@@ -113,7 +112,6 @@ const ImageEditingArea = ({ image, setClipArea }) => {
         [draggedFrame, getCoordsInBounds]
     );
 
-    // Избегаем частых обновлений состояния, используя debounce
     const onMouseMoveDebounced = useCallback(debounce(onMouseMove, 100), [onMouseMove]);
 
     const onMouseUp = () => {
